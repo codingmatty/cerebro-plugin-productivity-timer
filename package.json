@@ -1,0 +1,23 @@
+{
+  "name": "cerebro-productivity-timer",
+  "version": "1.0.0",
+  "dependencies": {
+    "cerebro-tools": "^0.1.8",
+    "cerebro-ui": "^0.0.16",
+    "hrstopwatch": "^1.1.0"
+  },
+  "devDependencies": {
+    "cerebro-scripts": "0.0.11"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "cerebro",
+    "cerebro-plugin",
+    "cerebro-plugin-productivity-timer"
+  ],
+  "scripts": {
+    "start": "cerebro-scripts start",
+    "build": "cerebro-scripts build",
+    "test": "cerebro-scripts test"
+  }
+}

@@ -64,15 +64,16 @@ function getPreview() {
   );
 }
 
-function plugin({ term, display, actions, config }) {
+function plugin({ term, display, actions, config, settings }) {
   theme = config.get('theme').includes('dark') ? 'dark' : 'light';
-  console.log('THEME', theme);
+
   const match = regex.exec(term);
   if (match) {
     const [, actionInput] = match;
     const displayArray = Object.keys(stopwatchActions)
       .filter((action) => !actionInput || action.toLowerCase().startsWith(actionInput))
-      .map((action) => ({
+      .map((action, i) => ({
+        id: i.toString(),
         icon: icons[theme][action],
         title: `${name}: ${action}`,
         getPreview,
@@ -84,6 +85,7 @@ function plugin({ term, display, actions, config }) {
   } else if (stopwatch.started) {
     // Display current productivity timer state
     display({
+      id: 'default',
       icon: icons[theme].general,
       title: 'Current Productivity Timer',
       getPreview,

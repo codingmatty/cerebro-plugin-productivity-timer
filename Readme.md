@@ -1,8 +1,8 @@
 # cerebro-productivity-timer
 
-> [Cerebro](https://cerebroapp.com) plugin to setup a productivity timer.
+[Cerebro](https://cerebroapp.com) plugin to setup a productivity timer.
 
-![](screenshot.png)
+![](./screenshot.png)
 
 ## Usage
 
